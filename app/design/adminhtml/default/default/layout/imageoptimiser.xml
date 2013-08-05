@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <imageoptimiser_adminhtml_imageoptimiser_index>
+        <reference name="content">
+            <block type="imageoptimiser/adminhtml_imageoptimiser" name="imageoptimiser"/>
+        </reference>
+    </imageoptimiser_adminhtml_imageoptimiser_index>
+</layout>

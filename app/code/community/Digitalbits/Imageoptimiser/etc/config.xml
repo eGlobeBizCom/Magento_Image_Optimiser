@@ -5,12 +5,102 @@
             <version>0.1.0</version>
         </Digitalbits_Imageoptimiser>
     </modules>
+    <frontend>
+        <routers>
+            <imageoptimiser>
+                <use>standard</use>
+                <args>
+                    <module>Digitalbits_Imageoptimiser</module>
+                    <frontName>imageoptimiser</frontName>
+                </args>
+            </imageoptimiser>
+        </routers>
+        <layout>
+            <updates>
+                <imageoptimiser>
+                    <file>imageoptimiser.xml</file>
+                </imageoptimiser>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <imageoptimiser>
+                <use>admin</use>
+                <args>
+                    <module>Digitalbits_Imageoptimiser</module>
+                    <frontName>imageoptimiser</frontName>
+                </args>
+            </imageoptimiser>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <imageoptimiser module="imageoptimiser">
+                <title>Imageoptimiser</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="imageoptimiser">
+                        <title>Manage Items</title>
+                        <sort_order>0</sort_order>
+                        <action>imageoptimiser/adminhtml_imageoptimiser</action>
+                    </items>
+                </children>
+            </imageoptimiser>
+        </menu>
+        <layout>
+            <updates>
+                <imageoptimiser>
+                    <file>imageoptimiser.xml</file>
+                </imageoptimiser>
+            </updates>
+        </layout>
+    </adminhtml>
     <global>
         <models>
             <imageoptimiser>
                 <class>Digitalbits_Imageoptimiser_Model</class>
+                <resourceModel>imageoptimiser_mysql4</resourceModel>
             </imageoptimiser>
+            <imageoptimiser_mysql4>
+                <class>Digitalbits_Imageoptimiser_Model_Mysql4</class>
+                <entities>
+                    <imageoptimiser>
+                        <table>imageoptimiser</table>
+                    </imageoptimiser>
+                </entities>
+            </imageoptimiser_mysql4>
         </models>
+        <resources>
+            <imageoptimiser_setup>
+                <setup>
+                    <module>Digitalbits_Imageoptimiser</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </imageoptimiser_setup>
+            <imageoptimiser_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </imageoptimiser_write>
+            <imageoptimiser_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </imageoptimiser_read>
+        </resources>
+        <blocks>
+            <imageoptimiser>
+                <class>Digitalbits_Imageoptimiser_Block</class>
+            </imageoptimiser>
+        </blocks>
+        <helpers>
+            <imageoptimiser>
+                <class>Digitalbits_Imageoptimiser_Helper</class>
+            </imageoptimiser>
+        </helpers>
     </global>
     <default>
         <imageopt>
