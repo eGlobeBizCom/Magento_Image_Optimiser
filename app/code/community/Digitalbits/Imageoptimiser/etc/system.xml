@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <imopt translate="label">
+            <label>Image Optimiser</label>
+            <sort_order>150</sort_order>
+        </imopt>
+    </tabs>
+    <sections>
+        <imageopt translate="label" module="adminhtml">
+            <label>Imageoptimiser</label>
+            <tab>imopt</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label comment">
+                    <label>General</label>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                        <![CDATA[Here you can set all the base options for automatic image optimisation at time of upload]]></comment>
+                    <fields>
+                        <active translate="label comment">
+                            <label>Enable/Disable</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <img_height translate="label comment">
+                            <label>Image Target Height</label>
+                            <comment>Target height to resize if higher than this number.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </img_height>
+                        <img_width translate="label comment">
+                            <label>Image Target Width</label>
+                            <comment>Target width to resize if higher than this number.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </img_width>
+                        <img_qual translate="label comment">
+                            <label>Image Target Quality</label>
+                            <comment>Target quality.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </img_qual>
+
+                        <heading_example translate="label">
+                            <label>Yahoo Smush.it</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </heading_example>
+                        <use_smushit translate="label comment">
+                            <label>Use Smush.it?</label>
+                            <comment>
+                                <![CDATA[use smush.it to save image size? info <a href="http://developer.yahoo.com/yslow/smushit/faq.html" target="_blank">here</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </use_smushit>
+                    </fields>
+                </general>
+            </groups>
+        </imageopt>
+    </sections>
+</config>

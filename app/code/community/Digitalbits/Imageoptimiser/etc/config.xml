@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Digitalbits_Imageoptimiser>
+            <version>0.1.0</version>
+        </Digitalbits_Imageoptimiser>
+    </modules>
+    <global>
+        <models>
+            <imageoptimiser>
+                <class>Digitalbits_Imageoptimiser_Model</class>
+            </imageoptimiser>
+        </models>
+    </global>
+    <default>
+        <imageopt>
+            <general>
+                <active>Disable</active>
+                <img_height>1000</img_height>
+                <img_width>1000</img_width>
+                <img_qual>60</img_qual>
+                <use_smushit>1</use_smushit>
+            </general>
+        </imageopt>
+    </default>
+    <crontab>
+        <jobs>
+            <imageoptimiser_optimiseimages>
+                <schedule>
+                    <cron_expr>* * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>imageoptimiser/observer::cronOptimiseImages</model>
+                </run>
+            </imageoptimiser_optimiseimages>
+
+        </jobs>
+    </crontab>
+</config>

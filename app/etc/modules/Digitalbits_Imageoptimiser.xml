@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Digitalbits_Imageoptimiser>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Digitalbits_Imageoptimiser>
+    </modules>
+</config>
